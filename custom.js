@@ -1,4 +1,18 @@
+// Lenish
+const lenis = new Lenis()
 
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+// Animation
 gsap.to(".colorbox-1", {
 	top:"-100%",
 	delay:0.1,
@@ -69,30 +83,76 @@ tl.from(".welcome h1 span", {
 var tl2 =  gsap.timeline({
 	scrollTrigger:{
 		trigger: ".welcome",
-		start: '5% top',
-		end: 'bottom 10%',
-		markers:true,
+		start: '3% 1%',
+		end: '120% 5%',
+		// markers:true,
 		scrub: 1
 	}
 });
 
 
 tl2.to(".welcome",{
-	duration:2.5,
-	 transform: "skewX(20deg)",
-	height: '80vh',
-	// rotateX: 10,
+
+	transform: 'scale(0.8,0.8)',
+	rotate:'-3deg',
 	ease: "power2.out",
+	// top:'220px',
+	// transform: 'rotate(-10deg)',
 })
 
 
 
+var tl3 = gsap.timeline({
+scrollTrigger:{
+	trigger: ".eventsec",
+	start: '2% 95%',
+	end: '90% 110%',
+	markers:true,
+	scrub:-1
+}
+});
+
+
+tl3.from(".eventsec",{
+	transform:'scale(0.8,0.8)',
+	rotate:'3deg',
+	ease:"power2.out"
+})
+
+
+tl3.from(".cards-1",{
+	top:'100px',
+	duration:0.3,
+
+},'cardss')
+
+tl3.from(".cards-2",{
+	top:'200px',
+	duration:0.3,
+
+},'cardss')
+
+tl3.from(".cards-3",{
+	top:'400px',
+	duration:0.3,
+},'cardss')
+
+tl3.from(".cards-4",{
+	top:'600px',
+	duration:0.3,
+},'cardss')
 
 
 
+// Drag
 
+// var drags = document.querySelector(".cardbx");
 
-
+// drags.addEventListener("drag", function(dats){
+// 	gsap.to(".cards",{
+// 		x:"-10%",
+// 	})
+// })
 
 
 
