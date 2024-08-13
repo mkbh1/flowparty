@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{box-sizing:border-box;}
 html,body{width:100%;height:100%;font-family:"Open Sans",sans-serif;}
-body{padding:0;margin:0;background:#000;}
-@font-face{font-family:HumaneBold;src:url(../Humane-Bold.otf);}
-#main{width:100%;height:100%;position:relative;}
-.logo{position:fixed;top:10px;left:10px;z-index:9;mix-blend-mode:difference;}
-.d-flex{display:flex;}
+body{padding:0;margin:0;background:#000;overflow-x:hidden;}
+@font-face{font-family:HumaneBold;src:url(./font/Humane-Bold.otf);}
+/*#main{width:100%;height:100%;}*/
+
+/*header { padding: 0 2vw }*/
+.logo{position:fixed;top:2vw;left:2vw;z-index:9;mix-blend-mode:difference;}
+.logo img{max-width:150px;}
+.d-flex{display:flex;flex-wrap:wrap;}
 .d-flex-c{display:flex;flex-direction:column;}
 .colorbox{position:absolute;top:0;width:100%;height:100vh}
 .colorbox-1{background:#5546FF;z-index:3;}
@@ -25,54 +28,41 @@ img.curvenavimg{position:absolute;bottom:20px;left:0;right:0;}
 .nav a:hover .hovernav{transition:all ease .5s;transform:translateY(0px);}
 .navToggle{cursor:pointer;position:absolute;bottom:40px;font-size:30px;color:#000;z-index:9;margin:auto;display:table;width:50px;left:0;right:0;text-align:center;}
 .navClose{visibility:hidden;cursor:pointer;opacity:0;position:absolute;bottom:40px;font-size:30px;color:#000;z-index:9;margin:auto;display:table;width:50px;left:0;right:0;text-align:center;}
-.welcome{width:100%;height:100vh;background:#5546FF;align-items:center;align-content:center;position:relative;}
+.loadsvg{position:absolute;left:-1%;top:50%;bottom:auto;z-index:1;width:27rem;transform:rotate(15deg);}
+
+/*.loadsvg2 {left: inherit;right: -30px; transform: rotate(15deg);}*/
+.loadsvg2{left:initial;right:-3%;top:-4%;bottom:auto;transform:rotateY(156deg);}
+.loadsvg svg{width:100%;}
+.loadsvg dotlottie-player{width:100%!important;height:100%!important;}
+.welcome{width: 100%; height: 100svh; display: flex; position: -webkit-sticky; position: sticky; top: 0; overflow: hidden; 
+	background:#5546FF;align-items:center;align-content:center;    justify-content: center;}
 .welcome-text{height:75vh;overflow:hidden;position:absolute;margin:auto;top:0;bottom:0;}
 .welcome-text h1{margin:0;font-family:HumaneBold;font-size:50vw;color:#fff;text-align:center;letter-spacing:-34px;}
 .welcome-text h1 span{display:inline-block;}
 .event{height:100vh;width:100%;background:#000;}
-.permosation { position: absolute;right: 0; bottom: 0 }
-
-.permosation img {
-    width: 210px;
-    height: 210px;
+.permosation{position:absolute;right:0;bottom:0}
+.permosation img{width:210px;height:210px;}
+.permosation{position:absolute;right:0;bottom:0;z-index:2;width:210px;height:210px;display:flex;align-items:center;align-content:center;justify-content:center;}
+.permosation span{font-family:'HumaneBold';color:#000;text-align:center;font-size:45px;position:absolute;left:0;right:0;margin:auto;text-transform:uppercase;}
+#partyImg{animation:rotation 5s infinite}
+@keyframes rotation{
+0%{rotate:0deg;}
+100%{rotate:100deg;}
 }
+.safecnt{position:absolute;bottom:0;}
+.safecnt p{font-size:25px;color:#fff;}
+.eventsec{padding:12vw 0; background: #000;}
+.eventheading h2{font-size:11vw;color:#fff;text-transform:uppercase;font-family:'HumaneBold';margin:0;}
+.eventheading p{font-size:2vw;color:#fff;margin:0;}
+.eventheading{padding:0 2vw;justify-content:space-between;}
 
-.permosation {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    width: 210px;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-.permosation span {
-    font-family: 'HumaneBold';
-    color: #000;
-    text-align: center;
-    font-size: 45px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-transform: uppercase;
-}
-
-#partyImg { animation: rotation 5s infinite }
-
-
-@keyframes rotation {
-
-0%{
-	rotate:0deg;
-}
-
-100%{
-	rotate:100deg;
-}
-}
-.safecnt { position: absolute; bottom: 0; }
-.safecnt p { font-size: 25px; color: #fff; }
+/*.cards{height:60vw;}*/
+.cards{width:150%;}
+.cardbx{width:100vw;padding:8vw 0;}
+.cards-1,.cards-2,.cards-3,.cards-4{width:30vw;}
+.cards-3{background:yellow;padding:2px;}
+.cards img{width:100%;height:100%;object-fit:cover;}
+.position-relative{position:relative;}
+.card-title{position:absolute;bottom:20px;left:30px;}
+.card-title h2{font-size:4vw;color:#fff;text-transform:uppercase;font-family:'HumaneBold';margin:0;}
+.section-5{width:100%;height:100vh;}
