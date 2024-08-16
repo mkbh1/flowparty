@@ -209,22 +209,21 @@ tl4.from("#bolan",{
 var tl5 = gsap.timeline({
 	scrollTrigger:{
 		trigger:"#whatflow",
-		start:'1% 60%',
+		start:'1% 85%',
 		end:'20% 20%',
 		markers:true,
 
 	}
 })
 
-tl5.from(".whatheadingletter span",{
-	y: 180,
-	stagger: {
-        each: 0.3,
-        from: 'start',
-    },
-	ease: "power2.in",
-	duration:0.9,
-	opacity:1
+tl5.to(".whatheadingletter span",{
+  duration: 1,
+  rotation: 360,
+  opacity: 1, 
+  delay: 0.5, 
+  stagger: 0.2,
+  ease: "sine.out", 
+  force3D: true
 })
 
 
