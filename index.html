@@ -3,10 +3,11 @@
 <head>
 	<title>Hello</title>
 	<link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+	href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 	<link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"/>
+	href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+	rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -40,12 +41,12 @@
 		<div class="colorbox colorbox-3"></div>
 		<div class="welcome">
 			<div class="loadsvg">
-    	<dotlottie-player src="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b91831bdfb6_marker_line_lottie.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
-		</div>
+				<dotlottie-player src="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b91831bdfb6_marker_line_lottie.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
+			</div>
 
-		<div class="loadsvg loadsvg2">
-    	<dotlottie-player src="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b91831bdfb6_marker_line_lottie.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
-		</div>
+			<div class="loadsvg loadsvg2">
+				<dotlottie-player src="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b91831bdfb6_marker_line_lottie.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
+			</div>
 			<div class="welcome-text">
 				<div class="permosation">
 					<img id="partyImg" src="img/permosation.svg" alt="img">
@@ -63,63 +64,169 @@
 			</div>
 		</div>
 		<div class="eventsec">
+
 			<div class="d-flex eventheading">
-				<h2>Event</h2>
+				<h2 id="event">
+					<span>E</span>
+					<span>V</span>
+					<span>E</span>
+					<span>N</span>
+					<span>T</span>
+					<span>S</span>
+				</h2>
 				<p>Our virtual events feature the <br> top talent in the design & <br> development space.</p>
 			</div>
 
 			<div class="cardbx">
-				<div class="cards d-flex">
-					<div class="cards-1">
-						<video poster="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/65a7f6f27b2c61eb132142ab_hero-home.jpg" class="lazyload" playsinline="" autoplay="" muted="" loop="" style="width: 100%; height: 100%; object-fit: cover">
-							<source data-src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/hero-home-w.mp4?raw=1?raw=1" type="video/mp4" class="thevideo" src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/hero-home-w.mp4?raw=1?raw=1"></video>
-					</div>
-					<div class="cards-2 position-relative">
-						<img src="img/card-img02.jpg" class="cover-img">
-						<div class="card-title">
-							<h2>
-								The Making of <br> Pigeon's Mission
-							</h2>
-
-						</div>
-					</div>
-							<div class="cards-3 position-relative">
-								<img src="img/card-img03.jpg" class="cover-img">
-
-								<div class="card-title">
-									<h2>
-										The Making of <br> Pigeon
-									</h2>
-
+					<div class="cardsmain 1d-flex">
+				<div class="drag" id="dragms">Drag</div>
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div id="cards-1" class="cards">
+										<video poster="https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/65a7f6f27b2c61eb132142ab_hero-home.jpg" class="lazyload" playsinline="" autoplay="" muted="" loop="" style="width: 100%; height: 100%; object-fit: cover">
+								<source data-src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/hero-home-w.mp4?raw=1?raw=1" type="video/mp4" class="thevideo" src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/hero-home-w.mp4?raw=1?raw=1"></video>
 								</div>
-							</div>
-							<div class="cards-4 position-relative ">
+								</div>
+								<div class="swiper-slide">
+									<div id="cards-2" class="cards position-relative">
+									<img src="img/card-img02.jpg" class="cover-img">
+									<div class="card-title">
+										<h2>
+											The Making of <br> Pigeon's Mission
+										</h2>
+
+									</div>
+								</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div id="cards-3" class="cards cards-3 position-relative">
+									<img src="img/card-img03.jpg" class="cover-img">
+
+									<div class="card-title">
+										<h2>
+											The Making of <br> Pigeon
+										</h2>
+
+									</div>
+								</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div id="cards-4" class="cards position-relative ">
 								<img src="img/card-img04.jpg" class="cover-img">
 								<div class="card-title">
 									<h2>
 										The Making <br>  Mission
 									</h2>
-
+								</div>
+							</div>
 								</div>
 
+								<div class="swiper-slide">
+									<div id="cards-2" class="cards position-relative">
+									<img src="img/card-img02.jpg" class="cover-img">
+									<div class="card-title">
+										<h2>
+											The Making of <br> Pigeon's Mission
+										</h2>
+
+									</div>
+								</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div id="cards-3" class="cards cards-3 position-relative">
+									<img src="img/card-img03.jpg" class="cover-img">
+
+									<div class="card-title">
+										<h2>
+											The Making of <br> Pigeon
+										</h2>
+
+									</div>
+								</div>
+								</div>
+
+
 							</div>
-						</div>
 					</div>
-		</div>
-		<div class="whatflowsec">
-			<div class="whatheading">
-				<h2>What is the <span>Flow party</span></h2>
+					</div>
+				</div>
+				</div>
+				<div class="whatflowsec" id="whatflow">
+					<div class="whatflowhead">
+						
+					
+					<div class="whatheading">
+						<h2 class="whatheadingletter">
+							<span>W</span>
+							<span>h</span>
+							<span>a</span>
+							<span>t</span>
+							<span>i</span>
+							<span>s</span>
+							<span>t</span>
+							<span>h</span>
+							<span>e</span>
+						</h2>
+
+						<!-- <h2 class="whatheadingletter">
+							<span>F</span>
+							<span>l</span>
+							<span>o</span>
+							<span>w</span>
+							<span>p</span>
+							<span>a</span>
+							<span>r</span>
+							<span>t</span>
+							<span>y</span>
+						</h2> -->	
+					</div>
+					<div id="bolan"><img src="img/gola2.png" alt="img"></div>
+					<div id="flowtext">
+						<img src="img/flowtext.svg" alt="img">
+					</div>
+					</div>
+					<div class="flowpartcnt">
+						<p>The Flow Party is a safe, inclusive, and fun space for website developers and designers. We are an upbeat community, not for the faint of heart. We work hard but always in a Party Mood. Whether we're coding up a storm or taking a break to chat and share ideas, we always have a good time.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	
 
 
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-<script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script> 
-<script type="text/javascript" src="custom.js"></script>
-</body>
-</html>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+     
+      spaceBetween:0,
+      grabCursor: true,
+    
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+			<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+			<script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script> 
+			<script type="text/javascript" src="custom.js"></script>
+		</body>
+		</html>

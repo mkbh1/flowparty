@@ -12,7 +12,10 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
-// Animation
+// end
+
+
+// Onload banner Animation
 gsap.to(".colorbox-1", {
 	top:"-100%",
 	delay:0.1,
@@ -29,14 +32,10 @@ gsap.to(".colorbox-3", {
 	delay:0.7,
 })
 
-
+// Nav
 
 var naviToggle = document.querySelector(".navToggle")
-
 var naviClose = document.querySelector(".navClose")
-
-
-
 
 naviToggle.addEventListener("click", function(){
 	naviToggle.style.opacity = "0";
@@ -59,14 +58,13 @@ naviClose.addEventListener("click", function(){
 	})	
 })
 
-
+// Welcome
 
 var tl =  gsap.timeline();
 
 tl.from(".welcome h1 span", {
 	y: 800,
 	stagger: {
-        // wrap advanced options in an object
         each: 0.3,
         from: 'start',
         grid: 'auto',
@@ -75,10 +73,6 @@ tl.from(".welcome h1 span", {
 	ease: "power2.out",
 	duration:0.9
 });
-
-
-
-
 
 var tl2 =  gsap.timeline({
 	scrollTrigger:{
@@ -96,18 +90,16 @@ tl2.to(".welcome",{
 	transform: 'scale(0.8,0.8)',
 	rotate:'-3deg',
 	ease: "power2.out",
-	// top:'220px',
-	// transform: 'rotate(-10deg)',
 })
 
 
-
+// Event
 var tl3 = gsap.timeline({
 scrollTrigger:{
 	trigger: ".eventsec",
-	start: '2% 95%',
-	end: '90% 110%',
-	markers:true,
+	start: '2% 90%',
+	end: '60% 90%',
+	// markers:true,
 	scrub:-1
 }
 });
@@ -117,29 +109,36 @@ tl3.from(".eventsec",{
 	transform:'scale(0.8,0.8)',
 	rotate:'3deg',
 	ease:"power2.out"
-})
+},'a')
+
+tl3.from("#event span",{
+	y:50,
+	duration:0.2,
+	stagger:0.1,
+	opacity:0,
+},'a')
 
 
-tl3.from(".cards-1",{
+tl3.from("#cards-1",{
 	top:'100px',
-	duration:0.3,
+	duration:0.6,
 
 },'cardss')
 
-tl3.from(".cards-2",{
+tl3.from("#cards-2",{
 	top:'200px',
-	duration:0.3,
+	duration:0.6,
 
 },'cardss')
 
-tl3.from(".cards-3",{
+tl3.from("#cards-3",{
 	top:'400px',
-	duration:0.3,
+	duration:0.6,
 },'cardss')
 
-tl3.from(".cards-4",{
+tl3.from("#cards-4",{
 	top:'600px',
-	duration:0.3,
+	duration:0.6,
 },'cardss')
 
 
@@ -155,7 +154,78 @@ tl3.from(".cards-4",{
 // })
 
 
+// Swip
 
+let drag = document.querySelector(".cardsmain");
+let cusor = document.querySelector("#dragms");
+
+drag.addEventListener("mousemove", function(dets){
+gsap.to(cusor,{
+	x:dets.x,
+	y:dets.y,
+	duration:0.5,
+	ease: "power1.out",
+})
+
+});
+
+
+drag.addEventListener("mouseleave", function(dets){
+gsap.to(cusor,{
+	opacity:0
+})
+
+
+});
+
+
+drag.addEventListener("mouseenter", function(dets){
+gsap.to(cusor,{
+	opacity:1
+})
+
+
+});
+
+
+
+// What is flow Animation
+var tl4 = gsap.timeline({
+	scrollTrigger:{
+		trigger:"#whatflow",
+		start: '15% 80%',
+		end:'30% 10%',
+		// markers:true,
+		scrub:-1,
+	}
+});
+
+tl4.from("#bolan",{
+	y:200,
+	duration:0.2
+})
+
+
+var tl5 = gsap.timeline({
+	scrollTrigger:{
+		trigger:"#whatflow",
+		start:'1% 60%',
+		end:'20% 20%',
+		markers:true,
+
+	}
+})
+
+tl5.from(".whatheadingletter span",{
+	y: 180,
+	stagger: {
+        each: 0.3,
+        from: 'start',
+    },
+	ease: "power2.in",
+	duration:0.9,
+	opacity:1
+})
 
 
 
