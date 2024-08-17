@@ -205,13 +205,19 @@ tl4.from("#bolan",{
 	duration:0.2
 })
 
+tl4.from("#bolan2",{
+	y:200,
+	duration:0.2
+})
+
+
 
 var tl5 = gsap.timeline({
 	scrollTrigger:{
 		trigger:"#whatflow",
 		start:'1% 85%',
 		end:'20% 20%',
-		markers:true,
+		// markers:true,
 
 	}
 })
@@ -228,4 +234,53 @@ tl5.to(".whatheadingletter span",{
 
 
 
+
+tl5.to(".whatheadingletter span",{
+  duration: 1,
+  rotation: 360,
+  opacity: 1, 
+  delay: 0.5, 
+  stagger: 0.2,
+  ease: "sine.out", 
+  force3D: true
+})
+
+
+
+var tl6 = gsap.timeline({
+	scrollTrigger:{
+		trigger:"#whatflow",
+		start:"50% 30%",
+		end:"80% 80%",
+		markers:true,
+		scrub:1,
+	}
+
+});
+
+
+tl6.to("#witty1",{
+	x:"3vw",
+	duration:0.1,
+	ease: "power1.inOut",
+},'TX')
+
+tl6.to("#witty2",{
+	x:"-3vw",
+	duration:0.1,
+	ease: "power1.inOut",
+},'TX')
+
+tl6.to("#witty3",{
+	x:"3vw",
+	duration:0.1,
+	ease: "power1.inOut",
+},'TX')
+
+
+tl6.to("#witty4",{
+	x:"-3vw",
+	duration:0.1,
+	ease: "power1.inOut",
+},'TX')
 
